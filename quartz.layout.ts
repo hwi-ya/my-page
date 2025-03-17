@@ -9,10 +9,10 @@ export const sharedPageComponents: SharedLayout = {
     Component.Comments({
       provider: 'giscus',
       options: {
-        repo: 'Jyo-ara/Digital-Garden',
-        repoId: 'R_kgDOOF-N0Q',
+        repo: 'hwi-ya/my-page',
+        repoId: 'R_kgDOOJ2iWQ',
         category: 'General',
-        categoryId: 'DIC_kwDOOF-N0c4CnxeG',
+        categoryId: 'DIC_kwDOOJ2iWc4CoId_',
         mapping: 'pathname',
       }
     }),
