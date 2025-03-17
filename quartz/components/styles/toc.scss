@@ -1,24 +1,13 @@
-@use "../../styles/variables.scss" as *;
-
 .toc {
   display: flex;
   flex-direction: column;
-
-  overflow-y: hidden;
-  min-height: 4rem;
-  flex: 0 1 auto;
-  &:has(button.toc-header.collapsed) {
-    flex: 0 1 1.2rem;
-  }
-}
-
-@media all and not ($mobile) {
-  .toc-header {
+  &.desktop-only {
     display: flex;
+    max-height: 40%;
   }
 }
 
-button.toc-header {
+button#toc {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -45,9 +34,28 @@ button.toc-header {
   }
 }
 
-.toc-content {
+#toc-content {
   list-style: none;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 100%;
+  transition:
+    max-height 0.35s ease,
+    visibility 0s linear 0s;
   position: relative;
+  visibility: visible;
+
+  &.collapsed {
+    max-height: 0;
+    transition:
+      max-height 0.35s ease,
+      visibility 0s linear 0.35s;
+    visibility: hidden;
+  }
+
+  &.collapsed > .overflow::after {
+    opacity: 0;
+  }
 
   & ul {
     list-style: none;
@@ -64,10 +72,25 @@ button.toc-header {
       }
     }
   }
+  > ul.overflow {
+    max-height: none;
+  }
 
   @for $i from 0 through 6 {
     & .depth-#{$i} {
-      padding-left: calc(1rem * #{$i});
+      padding-left: 0; /* calc(1rem * #{$i}); */
     }
   }
+}
+
+/* 목차 항목(li) 사이에 구분선 추가 */
+#toc-content li {
+  border-bottom: 1px solid var(--lightgray); /* 구분선 추가 */
+  padding-bottom: 5px; /* 아래쪽 여백 */
+  margin-bottom: 5px; /* 다음 항목과의 간격 */
+}
+
+/* 마지막 항목에는 구분선 제거 */
+#toc-content li:last-child {
+  border-bottom: none;
 }

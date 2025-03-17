@@ -5,7 +5,18 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        repo: 'Jyo-ara/Digital-Garden',
+        repoId: 'R_kgDOOF-N0Q',
+        category: 'General',
+        categoryId: 'DIC_kwDOOF-N0c4CnxeG',
+        mapping: 'pathname',
+      }
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
@@ -25,21 +36,15 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-    Component.Explorer(),
+    Component.Search(),
+    Component.Darkmode(),
+    Component.Explorer()
   ],
   right: [
-    Component.Graph(),
+    /* Component.Graph(), */
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    /* Component.Backlinks(), */
+    Component.RecentNotes({ limit: 5, showTags: false, showDate: false }),
   ],
 }
 
@@ -49,15 +54,8 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(),
+    Component.Darkmode(),
     Component.Explorer(),
   ],
   right: [],
