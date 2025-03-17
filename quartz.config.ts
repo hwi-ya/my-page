@@ -8,16 +8,16 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "✨ 함께 아라가는 인공지능",
+    pageTitle: "✨ Cheek's Page",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "google",
-      tagId: "G-YP8FJ442J1",
+      tagId: "G-4TXZEDB32L",
     },
     locale: "ko-KR",
-    baseUrl: "ara-digital-garden.pages.dev",
+    baseUrl: "my-page-tic.pages.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: false,
