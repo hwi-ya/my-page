@@ -30,7 +30,7 @@ export default {
       darkMode: "다크 모드",
     },
     explorer: {
-      title: "탐색기",
+      title: "📂",
     },
     footer: {
       createdWith: "Created with",
@@ -39,7 +39,7 @@ export default {
       title: "그래프 뷰",
     },
     recentNotes: {
-      title: "최근 게시글",
+      title: "💌 Latest Posts",
       seeRemainingMore: ({ remaining }) => `${remaining}건 더보기 →`,
     },
     transcludes: {
@@ -47,11 +47,11 @@ export default {
       linkToOriginal: "원본 링크",
     },
     search: {
-      title: "검색",
+      title: "Search",
       searchBarPlaceholder: "검색어를 입력하세요",
     },
     tableOfContents: {
-      title: "목차",
+      title: "📑 목차",
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes} min read`,
@@ -59,7 +59,7 @@ export default {
   },
   pages: {
     rss: {
-      recentNotes: "최근 게시글",
+      recentNotes: "💌 Latest Posts",
       lastFewNotes: ({ count }) => `최근 ${count} 건`,
     },
     error: {

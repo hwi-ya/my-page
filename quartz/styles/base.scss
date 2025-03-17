@@ -309,10 +309,14 @@ input[type="checkbox"] {
 }
 
 blockquote {
-  margin: 1rem 0;
-  border-left: 3px solid var(--secondary);
+  margin: 0.5rem 0;
+  border-left: 2px solid #7e7e7e;
   padding-left: 1rem;
   transition: border-color 0.2s ease;
+  
+  p, li {
+    line-height: 2rem; // 원하는 값으로 조정 가능
+  }
 }
 
 h1,
@@ -350,10 +354,6 @@ h6 {
 
   &[id]:hover > a {
     opacity: 1;
-  }
-
-  &:not([id]) > a[role="anchor"] {
-    display: none;
   }
 }
 
@@ -542,7 +542,7 @@ video {
 }
 
 .spacer {
-  flex: 2 1 auto;
+  flex: 1 1 auto;
 }
 
 div:has(> .overflow) {
@@ -555,14 +555,17 @@ ol.overflow {
   max-height: 100%;
   overflow-y: auto;
   width: 100%;
-  margin-bottom: 0;
 
   // clearfix
   content: "";
   clear: both;
 
+  & > li:last-of-type {
+    margin-bottom: 30px;
+  }
+
   & > li.overflow-end {
-    height: 1rem;
+    height: 4px;
     margin: 0;
   }
 
@@ -599,4 +602,10 @@ iframe.pdf {
   background: var(--secondary);
   transition: width 0.2s ease;
   z-index: 9999;
+}
+
+.page article ul li,
+.page article ol li {
+  margin-top : 0.5rem; // 문서 내 리스트 간격 조정
+  margin-bottom : 0.5rem; // 문서 내 리스트 간격 조정
 }
