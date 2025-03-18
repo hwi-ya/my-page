@@ -1,6 +1,7 @@
 ---
 publish: false
 draft: true
+date: "{{date}}"
 ---
 
 - ## Population create
