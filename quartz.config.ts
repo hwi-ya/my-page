@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       tagId: "G-4TXZEDB32L",
     },
     locale: "ko-KR",
-    baseUrl: "my-page-tic.pages.dev",
+    baseUrl: "cheeks.pages.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: false,
