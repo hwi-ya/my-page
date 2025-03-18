@@ -1,0 +1,130 @@
+- ## Population create
+        
+    ```python
+    import random
+    from ch3.selection_proportional import selection_proportional  # 비례 선택 함수 불러오기
+    from ch3.individual import Individual  # Individual 클래스 불러오기
+    
+    POPULATION_SIZE = 9  # 개체군 크기 설정
+    random.seed(4)  # 난수 시드 고정 (동일한 난수를 반복적으로 생성하기 위해)
+    
+    # 개체군 생성
+    population = Individual.create_random_population(POPULATION_SIZE)  # 개체군을 랜덤하게 생성
+    
+    # 비례 선택(룰렛 휠 선택) 방식으로 개체 선택
+    selected = selection_proportional(population)  # 선택된 개체는 룰렛 휠 선택 방식으로 뽑힘
+    
+    # 개체군과 선택된 개체 출력
+    print(f"Population: {population}")  # 생성된 전체 개체군 출력
+    print(f"Selected: {selected}")  # 선택된 개체들 출력
+    ```
+    
+    - Result
+        
+        ![image 4](https://github.com/hwi-ya/Genetic-Algorithm/blob/783333cdf2c36891b28439ca021ad3f40b00ff5b/image%204.png)
+        
+- ## Visualization
+    - Bar graph ver.
+        
+        ```python
+        import random
+        import pandas as pd
+        import matplotlib.pyplot as plt
+        from ch3.individual import Individual  # 개체 클래스(유전자 알고리즘에서 개체를 나타냄) 불러오기
+        
+        # 난수 시드 설정 (항상 동일한 난수 발생) -> 같은 결과를 재현 가능하게 함
+        random.seed(9)
+        
+        # 개체 수 설정
+        POPULATION_SIZE = 5
+        
+        # 랜덤한 개체 생성 (유전자 알고리즘에서 초기 개체군 생성)
+        unsorted_population = Individual.create_random_population(POPULATION_SIZE)
+        
+        # 개체를 fitness 값(적합도)에 따라 내림차순 정렬 (높을수록 좋은 개체)
+        population = sorted(unsorted_population, key=lambda ind: ind.fitness, reverse=True)
+        
+        # 개체군 확인 코드 
+        # for ind in population:
+        #     print(ind.name, ind.fitness)
+        
+        # 전체 개체군의 fitness 합계 계산
+        fitness_sum = sum([ind.fitness for ind in population])
+        
+        # 개체별 fitness 값을 저장할 딕셔너리 초기화
+        fitness_map = {}
+        
+        # 각 개체의 fitness 값을 기반으로 선택 확률 계산
+        for i in population:
+            i_prob = round(100 * i.fitness / fitness_sum)  # 선택 확률을 백분율(%)로 변환
+            i_label = f'{i.name} | fitness: {i.fitness}, prob: {i_prob}%'  # 개체 정보 문자열 생성
+            fitness_map[i_label] = i.fitness  # 딕셔너리에 저장 (key: 개체 정보, value: fitness 값)
+        
+        # 데이터프레임 생성 (개체별 fitness 값을 저장)
+        index = ['Sectors']
+        df = pd.DataFrame(fitness_map, index=index)
+        
+        # 수평 막대 그래프 생성 (개체들의 fitness 비율을 시각화)
+        df.plot.barh(stacked=True)
+        
+        # 룰렛 휠 선택 방식 시각화 (랜덤한 위치에 수직선 추가)
+        for _ in range(POPULATION_SIZE):
+            plt.axvline(x=random.random() * fitness_sum, linewidth=5, color='black')
+        
+        # x축 눈금 제거 (가독성 향상)
+        plt.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+        
+        # 그래프 표시
+        plt.show()
+        ```
+        
+    - Pie graph ver.
+        
+        ```python
+        import random
+        import pandas as pd
+        import matplotlib.pyplot as plt
+        from ch3.individual import Individual  # 개체 클래스(유전자 알고리즘에서 개체를 나타냄) 불러오기
+        
+        # 난수 시드 설정 (항상 동일한 난수 발생) -> 같은 결과를 재현 가능하게 함
+        random.seed(9)
+        
+        # 개체 수 설정
+        POPULATION_SIZE = 5
+        
+        # 랜덤한 개체 생성 (유전자 알고리즘에서 초기 개체군 생성)
+        unsorted_population = Individual.create_random_population(POPULATION_SIZE)
+        
+        # 개체를 fitness 값(적합도)에 따라 내림차순 정렬 (높을수록 좋은 개체)
+        population = sorted(unsorted_population, key=lambda ind: ind.fitness, reverse=True)
+        
+        # 전체 개체군의 fitness 합계 계산
+        fitness_sum = sum([ind.fitness for ind in population])
+        
+        # 개체별 fitness 값을 저장할 딕셔너리 초기화
+        fitness_map = {}
+        
+        # 각 개체의 fitness 값을 기반으로 선택 확률 계산
+        for i in population:
+            i_prob = round(100 * i.fitness / fitness_sum)  # 선택 확률을 백분율(%)로 변환
+            i_label = f'{i.name} | fitness: {i.fitness}, prob: {i_prob}%'  # 개체 정보 문자열 생성
+            fitness_map[i_label] = i.fitness  # 딕셔너리에 저장 (key: 개체 정보, value: fitness 값)
+            
+        # 1. 각 개체의 선택 확률
+        probabilities = [i.fitness / fitness_sum for i in population]
+        
+        # 2. 원그래프 시각화 (룰렛휠 방식)
+        fig, ax = plt.subplots(figsize=(7, 7))
+        
+        # 원그래프에 각 개체의 영역을 표시
+        ax.pie(probabilities, labels=[f'{i.name} | {i.fitness}' for i in population], autopct='%1.1f%%', startangle=90)
+        
+        # 그래프 스타일 설정
+        ax.axis('equal')  # 원이 완전한 원 형태로 나오게 함
+        plt.title("Roulette Wheel Selection Visualization")
+        plt.show()
+        ```
+        
+    - Result
+        
+        ![image 5](https://github.com/hwi-ya/Genetic-Algorithm/blob/783333cdf2c36891b28439ca021ad3f40b00ff5b/image%205.png)
