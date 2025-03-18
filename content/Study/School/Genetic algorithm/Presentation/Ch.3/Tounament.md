@@ -1,6 +1,4 @@
 ---
-publish: false
-draft: true
 date: "{{date}}"
 ---
 
