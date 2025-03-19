@@ -1,6 +1,6 @@
 ---
 created: 2025-03-18
-update: 2025-03-19
+updated: 2025-03-19
 dg-home: true
 dg-publish: true
 title: STUDY
