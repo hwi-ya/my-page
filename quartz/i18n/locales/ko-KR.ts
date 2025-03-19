@@ -30,7 +30,7 @@ export default {
       darkMode: "다크 모드",
     },
     explorer: {
-      title: "Togle",
+      title: "List",
     },
     footer: {
       createdWith: " ",
