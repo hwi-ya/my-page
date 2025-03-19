@@ -41,9 +41,16 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer()
   ],
   right: [
-    /* Component.Graph(), */
+    //우측 사이드바에 그래프 띄우기
+    //Component.Graph(),
+    
+    //우측 사이드바에 목차 띄우기
     Component.DesktopOnly(Component.TableOfContents()),
-    /* Component.Backlinks(), */
+    
+    //우측 사이드바에 백링크 띄우기
+    //Component.Backlinks()
+    
+    //우측 사이드바에 최근 업데이트 게시물 띄우기
     Component.RecentNotes({ limit: 5, showTags: false, showDate: false }),
   ],
 }
