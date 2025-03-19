@@ -30,7 +30,7 @@ export default {
       darkMode: "다크 모드",
     },
     explorer: {
-      title: "📂",
+      title: "Togle",
     },
     footer: {
       createdWith: "Created with",
@@ -39,7 +39,7 @@ export default {
       title: "그래프 뷰",
     },
     recentNotes: {
-      title: "💌 Latest Posts",
+      title: "Last Update",
       seeRemainingMore: ({ remaining }) => `${remaining}건 더보기 →`,
     },
     transcludes: {
