@@ -1,1 +1,1 @@
-# https://ara-digital-garden.pages.dev/
+# https://my-page-tic.pages.dev/
