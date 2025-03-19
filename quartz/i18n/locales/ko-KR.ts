@@ -33,7 +33,7 @@ export default {
       title: "Togle",
     },
     footer: {
-      createdWith: "Created with",
+      createdWith: " ",
     },
     graph: {
       title: "그래프 뷰",
