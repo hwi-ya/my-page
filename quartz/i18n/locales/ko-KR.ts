@@ -39,7 +39,7 @@ export default {
       title: "그래프 뷰",
     },
     recentNotes: {
-      title: "Last Update",
+      title: "New Contents",
       seeRemainingMore: ({ remaining }) => `${remaining}건 더보기 →`,
     },
     transcludes: {
