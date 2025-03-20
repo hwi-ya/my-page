@@ -38,6 +38,11 @@ export type Analytics =
       provider: "cabin"
       host?: string
     }
+  | {
+      provider: "clarity"
+      projectId?: string
+    }
+
 
 export interface GlobalConfiguration {
   pageTitle: string
