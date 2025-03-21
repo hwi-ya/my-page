@@ -4,9 +4,8 @@ updated: 2025-03-21
 dg-publish: true
 ---
 
-# 과제
+# 2주차 과제
   <img width="700" alt="sadfasdfasdfasdfa" src="https://github.com/user-attachments/assets/46d29af7-9987-4ec6-a455-5b384628e2dd" />
-  <br/>
 <hr>
 
 # 고유값 (eigenvalue)
@@ -34,5 +33,4 @@ dg-publish: true
   | 고유값을 이용한 대각화    | - 고유값을 이용하면 행렬을 대각행렬로 변환 가능하다.<br> - $A$가 대각화 가능하면, $A = PDP^{-1}$ 형태로 표현된다.                           |
   | 행렬의 성질과 고유값 관계 | - 행렬 $A$의 행렬식과 고유값은 관계가 있다( $det( A - λI ) = 0 $)<br> - 대칭 행렬 $A$가 양의 정부호 이려면, 모든 고유값이 양수이어야 한다.  |
   <br/>
-<hr>
   
