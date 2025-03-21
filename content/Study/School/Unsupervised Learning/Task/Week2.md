@@ -4,7 +4,7 @@ updated: 2025-03-21
 dg-publish: true
 ---
 
-<img width="479" alt="sadfasdfasdfasdfa" src="https://github.com/user-attachments/assets/46d29af7-9987-4ec6-a455-5b384628e2dd" />
+<img width="600" alt="sadfasdfasdfasdfa" src="https://github.com/user-attachments/assets/46d29af7-9987-4ec6-a455-5b384628e2dd" />
 
 
 # 고유값 (eigenvalue)
