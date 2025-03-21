@@ -4,7 +4,7 @@ updated: 2025-03-21
 dg-publish: true
 ---
 
-- # p.1(selection)
+- ## p.1(selection)
   **Selection is the choice of those individuals that will participate in creating offspring for the next population,**
   선택은 다음 세대를 위해 자식을 만드는데 참여할 개체들을 선택하는 것 이다. 즉, 다음 세대를 위한 과정이다.
 
@@ -19,13 +19,13 @@ dg-publish: true
   
   <hr>
 
-- # p.2 (selection)
+- ## p.2 (selection)
   **NOTE: It is important to understand that the same individual can be selected several times by the selection method, which means it can repeatedly participate in the process of creating new individuals.**
   참고 : 같은 객체가 선택 방법에 의해 여러번 선택될 수 있다는 것을 이해하는 것이 중요하다. 즉, 새로운 개체를 만드는 과정에 반복적으로 참여할 수 있다.
 
   <hr>
 
-- # p.3 (selection methods)
+- ## p.3 (selection methods)
   **Tournament selection**
   토너먼트 선택
 
@@ -43,7 +43,7 @@ dg-publish: true
 
   <hr>
 
-- # p.4 (Tournament selection)
+- ## p.4 (Tournament selection)
   **Tournament selection is one of the simplest selection methods, and we will start with it.**
   토너먼트 선택은 가장 간단한 선택 방법중 하나이며, 우리는 이것부터 시작할 것이다.
   
@@ -58,7 +58,7 @@ dg-publish: true
 
   <hr>
 
-- # p.6 (Tournament selection)
+- ## p.6 (Tournament selection)
   **As expected, two worst individuals, A and C were not selected.**
   예상대로 최악의 두 개체인 A와 C는 선택되지 않았다.
   
@@ -70,7 +70,7 @@ dg-publish: true
 
   <hr>
 
-- # p.7 (Proportional selection)
+- ## p.7 (Proportional selection)
   **This method can be illustrated with a roulette wheel.**
   이 방법은 룰렛 휠로 설명할 수 있다.
   
@@ -82,7 +82,7 @@ dg-publish: true
 
   <hr>
 
-- # p.9 (Stochastic universal sampling selection)
+- ## p.9 (Stochastic universal sampling selection)
   **Stochastic universal sampling selection method is an alternative method of proportional selection.**
   확률적 보편 샘플링 선택은 비례 선택의 대안방법이다.
   
@@ -95,7 +95,7 @@ proportional selection has, and ensures that the individuals are selected accord
 
   <hr>
 
-- # p.10 (Stochastic universal sampling selection)
+- ## p.10 (Stochastic universal sampling selection)
   **As with the proportional selection method, the stochastic universal sampling selection has the possibility to select the worst individual, and also has the possibility to not select the best individual.**
   비례 선택 방법과 마찬가지로, 확률적 보편 샘플링도 최악의 개체를 선택할 가능성이 있고 또한 최고의 개체를 선택하지 않을 가능성이 있다.
   
@@ -104,7 +104,7 @@ proportional selection has, and ensures that the individuals are selected accord
 
   <hr>
 
-- # p.11 (Rank selection)
+- ## p.11 (Rank selection)
   **Rank selection has the same principle as proportional selection, but individuals of the population are ranked according to the values of their fitness function.**
   순위 선택은 비례 선택과 동일한 원칙을 가진다, 그러나 그 집단의 개체들은 그들의 적합도 함수 값에 따라서 순위가 매겨진다.
   
@@ -116,13 +116,13 @@ proportional selection has, and ensures that the individuals are selected accord
 
   <hr>
 
-- # p.12 (Rank selection)
+- ## p.12 (Rank selection)
   **the best individual in rank selection has a lower chance of being selected than it has in the proportional selection, and on the contrary, the worst individual, which had no chance of being selected in proportional selection has some positive probability of being selected.**
   최고의 개체는 비례선택에서 보다 랭크선택에서 선택될 확률이 낮은 반면 최악의 개체는 비례선택에서는 선택될 수 없었지만 선택될 일부 긍정적인 확률을 가진다.
 
   <hr>
 
-- # p.14 (Elite selection)
+- ## p.14 (Elite selection)
   **As we have already seen, none of the selection methods that we have considered – tournament, proportional, stochastic universal sampling, and rank selection –guarantee the selection of the best individual.**
   우리가 이미 보았듯이 우리가 고려한 어떠한 선택 방법도 최고의 개체의 선택을 보장하지 않는다.
 
@@ -134,19 +134,19 @@ proportional selection has, and ensures that the individuals are selected accord
 
   <hr>
 
-- # Original Book p.111 (Elite selection)
+- ## Original Book p.111 (Elite selection)
   **NOTE: Elite selection is a handy method of selection in conditions where an individual's fitness may degenerate as a result of crossover or mutation. We need to protect the best individuals, and try to spread their genes among the population.**
   참고 : 엘리트 선택은 특정 조건(교차나 돌연변이의 결과로 개인의 적합도가 퇴화할 수 있는 상황에서)에서 유용한 선택방법이다.  우리는 최고의 개체를 보호해야하며, 그들의 유전자가 개체군에 퍼지도록 노력해야한다.
 
   <hr>
 
-- # Original Book p.112 (Conclusion)
+## Original Book p.112 (Conclusion)
   **Selection is a very important part of the evolution process; every individual aims to generate an offspring. The selection process is random by nature. We have studied several selection methods, each of which has its pros and cons. You can use one of these methods or any modification**
   선택은 진화 과정에서 매우 중요한 부분이다. 모든 개체는 자손을 생성하는 것을 목표로 한다. 선택과정은 본질적으로 랜덤이다. 우리는 여러가지 선택방법을 연구 했으며, 각각의 방법은 장단점이 있다. 너는 이러한 방법들중 하나나 어떤 수정이라도 사용할 수 있다.
 
   <hr>
 
-- # Original Book p.113 (Points to remember)
+## Original Book p.113 (Points to remember)
   **Each selection method has the following principle -- adapted individuals have a higher possibility to be selected than the abandoned ones.**
   각각의 선택방법은 다음의 원칙을 가지고 있다 -- 적응한 개체들은 버려진 개체보다 선택될 가능성이 더 높다.
   
