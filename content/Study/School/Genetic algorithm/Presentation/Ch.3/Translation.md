@@ -5,68 +5,68 @@ dg-publish: true
 ---
 
 - ## p.1(selection)
-  **Selection is the choice of those individuals that will participate in creating offspring for the next population,**
+  **Selection is the choice of those individuals that will participate in creating offspring for the next population,**  
   선택은 다음 세대를 위해 자식을 만드는데 참여할 개체들을 선택하는 것 이다. 즉, 다음 세대를 위한 과정이다.
 
-  **Such a choice is made by the principle of natural selection, according to which the most adapted individuals have the highest chances of participating in the creation of new individuals.**
+  **Such a choice is made by the principle of natural selection, according to which the most adapted individuals have the highest chances of participating in the creation of new individuals.**  
   이러한 선택은 자연 선택 원칙에 의해 이루어지며 가장 적응력이 높은 개체들이 새로운 개체를 만드는 것에 참여할 가장 높은 기회를 갖는다.
 
-  **As a result, an intermediate population (or parent pool) appears. An intermediate population is a set of individuals that have acquired the right to breed**
+  **As a result, an intermediate population (or parent pool) appears. An intermediate population is a set of individuals that have acquired the right to breed**  
   그 결과, 중간집단(혹은 부모 풀)이 발생한다. 이 중간집단은 번식할 권한을 획득한 개체들의 집합이다.
 
-  **Adapted individuals can be recorded there several times. The abandoned individuals will most likely not get there at all.**
+  **Adapted individuals can be recorded there several times. The abandoned individuals will most likely not get there at all.**  
   적응력이 높은 개체들은 여러번 기록될 수 있고 버려진 개체들은 그곳에 아예 포함되지 못 할 수도 있다.
   
   <hr>
 
 - ## p.2 (selection)
-  **NOTE: It is important to understand that the same individual can be selected several times by the selection method, which means it can repeatedly participate in the process of creating new individuals.**
-  참고 : 같은 객체가 선택 방법에 의해 여러번 선택될 수 있다는 것을 이해하는 것이 중요하다. 즉, 새로운 개체를 만드는 과정에 반복적으로 참여할 수 있다.
+  **NOTE: It is important to understand that the same individual can be selected several times by the selection method, which means it can repeatedly participate in the process of creating new individuals.**  
+  참고 : 같은 객체가 선택 방법에 의해 여러번 선택될 수 있다는 것을 이해하는 것이 중요하다. 즉, 새로운 개체를 만드는 과정에 반복적으로 참여할 수 있다.  
 
   <hr>
 
 - ## p.3 (selection methods)
-  **Tournament selection**
-  토너먼트 선택
+  **Tournament selection**  
+  토너먼트 선택  
 
-  **Proportional selection**
-  비례 선택
+  **Proportional selection**  
+  비례 선택  
   
-  **Stochastic universal sampling selection**
-  확률적 보편 샘플링 선택
+  **Stochastic universal sampling selection**  
+  확률적 보편 샘플링 선택  
   
-  **Rank selection**
-  순위 선택
+  **Rank selection**  
+  순위 선택  
   
-  **Elite selection**
+  **Elite selection**  
   엘리트 선택
 
   <hr>
 
 - ## p.4 (Tournament selection)
-  **Tournament selection is one of the simplest selection methods, and we will start with it.**
-  토너먼트 선택은 가장 간단한 선택 방법중 하나이며, 우리는 이것부터 시작할 것이다.
+  **Tournament selection is one of the simplest selection methods, and we will start with it.**  
+  토너먼트 선택은 가장 간단한 선택 방법중 하나이며, 우리는 이것부터 시작할 것이다.  
   
-  **In tournament selection, a subgroup is selected in a population, and then the best individual in this subgroup is selected**
-  토너먼트 선택에서는 집단에서 서브그룹이 선택되고, 그 후 우수한 개체가 서브그룹에서 선택된다.
+  **In tournament selection, a subgroup is selected in a population, and then the best individual in this subgroup is selected**  
+  토너먼트 선택에서는 집단에서 서브그룹이 선택되고, 그 후 우수한 개체가 서브그룹에서 선택된다.  
   
-  **Typically, the size of a subgroup is 2 or 3 individuals**
-  일반적으로 서브그룹의 크기는 2개체 혹은 3개체 이다.
+  **Typically, the size of a subgroup is 2 or 3 individuals**  
+  일반적으로 서브그룹의 크기는 2개체 혹은 3개체 이다.  
   
-  **NOTE: It is worth mentioning that if the group size is two, then the worst individual will never be selected; if the group size is three, then the two worst individuals will never be selected, and so on**
-  참고 : 이것은 언급할 가치가 있다 만약 그룹 크기가 2라면 최악의 개체는 절대 선택 되지 않으며  만약 그룹 크기가 3이라면 최악의 두 개체는 선택되지 않는다.
+  **NOTE: It is worth mentioning that if the group size is two, then the worst individual will never be selected; if the group size is three, then the two worst individuals will never be selected, and so on**  
+  참고 : 이것은 언급할 가치가 있다 만약 그룹 크기가 2라면 최악의 개체는 절대 선택 되지 않으며  만약 그룹 크기가 3이라면 최악의 두 개체는 선택되지 않는다.  
 
   <hr>
 
-- ## p.6 (Tournament selection)
-  **As expected, two worst individuals, A and C were not selected.**
-  예상대로 최악의 두 개체인 A와 C는 선택되지 않았다.
+- ## p.6 (Tournament selection)  
+  **As expected, two worst individuals, A and C were not selected.**  
+  예상대로 최악의 두 개체인 A와 C는 선택되지 않았다.  
   
-  **But we have one more interesting result – the individual D, which has the second fitness score, was also not selected.**
-  그러나 우리는 한가지 더 흥미로운 결과를 얻었는데 두 번째 적합도 점수를 가진 D개체 또한 선택되지 않았다.
+  **But we have one more interesting result – the individual D, which has the second fitness score, was also not selected.**  
+  그러나 우리는 한가지 더 흥미로운 결과를 얻었는데 두 번째 적합도 점수를 가진 D개체 또한 선택되지 않았다.  
   
-  **You always have to keep in mind that the tournament selection is a random process, and there is no 100% guarantee that the best individual will be selected**
-  명심해야 할 점은 토너먼트 선택이 무작위 과정이기에, 최고의 개체가 선택 될 것이라고 100% 보장할 수 없다는 것이다.
+  **You always have to keep in mind that the tournament selection is a random process, and there is no 100% guarantee that the best individual will be selected**  
+  명심해야 할 점은 토너먼트 선택이 무작위 과정이기에, 최고의 개체가 선택 될 것이라고 100% 보장할 수 없다는 것이다.  
 
   <hr>
 
