@@ -1,7 +1,7 @@
 ---
 created: 2025-03-21
 updated: 2025-03-21
-dg-publish: false
+dg-publish: True
 ---
 
 # 2주차 과제
